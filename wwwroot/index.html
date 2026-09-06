@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speedrun Split Tracker & Telemetry</title>
+    <style>
+        :root {
+            --bg: #0e1117;
+            --card-bg: #161b22;
+            --accent: #58a6ff;
+            --gold: #f1e05a;
+            --green: #2ea043;
+            --text: #c9d1d9;
+            --border: #30363d;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+        body { background: var(--bg); color: var(--text); padding: 24px; }
+        .container { max-width: 1100px; margin: 0 auto; display: grid; gap: 20px; }
+        header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); padding-bottom: 16px; }
+        h1 { font-size: 1.5rem; color: #fff; display: flex; align-items: center; gap: 8px; }
+        .category-select { background: var(--card-bg); color: #fff; border: 1px solid var(--border); padding: 8px 14px; border-radius: 6px; font-size: 0.95rem; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 18px; }
+        .card h2 { font-size: 1.15rem; margin-bottom: 14px; color: #fff; border-bottom: 1px solid var(--border); padding-bottom: 8px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+        th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+        th { color: #8b949e; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.5px; }
+        .time-badge { font-family: monospace; font-size: 0.95rem; font-weight: 600; color: var(--gold); }
+        .best-badge { color: var(--green); }
+        .form-group { margin-bottom: 12px; }
+        label { display: block; font-size: 0.85rem; color: #8b949e; margin-bottom: 4px; }
+        input, select { width: 100%; padding: 8px 10px; background: #0d1117; border: 1px solid var(--border); border-radius: 6px; color: #fff; }
+        button { background: var(--green); color: #fff; border: none; padding: 10px 16px; border-radius: 6px; font-weight: 600; cursor: pointer; width: 100%; }
+        button:hover { opacity: 0.9; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ Speedrun Split & Telemetry Tracker</h1>
+            <div>
+                <label>Category:</label>
+                <select id="categorySelect" class="category-select" onchange="loadAllData()">
+                    <option value="70 Star" selected>Super Mario 64 - 70 Star</option>
+                    <option value="16 Star">Super Mario 64 - 16 Star</option>
+                    <option value="120 Star">Super Mario 64 - 120 Star</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="grid">
+            <!-- Overall Leaderboard -->
+            <div class="card">
+                <h2>🏆 Category Leaderboard</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Runner</th>
+                            <th>Stars</th>
+                            <th>Total Time</th>
+                            <th>Best Star</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboardBody"></tbody>
+                </table>
+            </div>
+
+            <!-- Update Best Time Form -->
+            <div class="card">
+                <h2>⏱️ Update / Log Star Split (PB)</h2>
+                <form id="timeForm" onsubmit="handleUpdateTime(event)">
+                    <div class="form-group">
+                        <label>Runner Tag</label>
+                        <input type="text" id="runnerTag" value="CosmicMario" required />
+                    </div>
+                    <div class="form-group">
+                        <label>Star Mission</label>
+                        <select id="starSelect">
+                            <option value="Big Bob-omb on the Summit">Big Bob-omb on the Summit (Course 1)</option>
+                            <option value="Footrace with Koopa the Quick">Footrace with Koopa the Quick (Course 1)</option>
+                            <option value="Shoot to the Island in the Sky">Shoot to the Island in the Sky (Course 1)</option>
+                            <option value="Chip Off Whomp's Block">Chip Off Whomp's Block (Course 2)</option>
+                            <option value="To the Top of the Fortress">To the Top of the Fortress (Course 2)</option>
+                            <option value="Plunder in the Sunken Ship">Plunder in the Sunken Ship (Course 3)</option>
+                            <option value="Slip Slidin' Away">Slip Slidin' Away (Course 4)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Split Time (Seconds, e.g. 0.49 or 1.20)</label>
+                        <input type="number" step="0.01" id="splitSeconds" placeholder="0.49" required />
+                    </div>
+                    <button type="submit">💾 Save Split & Recalculate</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Star Splits Breakdown by Level -->
+        <div class="card">
+            <h2>⭐ Segment & Level Breakdown (Detailed Splits)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Course / Level</th>
+                        <th>Star #</th>
+                        <th>Star Name</th>
+                        <th>Best Split (s)</th>
+                        <th>Last Updated</th>
+                    </tr>
+                </thead>
+                <tbody id="splitsBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        async function loadLeaderboard() {
+            const cat = document.getElementById('categorySelect').value;
+            const res = await fetch(`/api/speedrun/leaderboard?category=${encodeURIComponent(cat)}`);
+            const data = await res.json();
+            const tbody = document.getElementById('leaderboardBody');
+            tbody.innerHTML = data.map(r => `
+                <tr>
+                    <td><strong>${r.runnerTag}</strong></td>
+                    <td>${r.starsCompleted} ⭐</td>
+                    <td class="time-badge">${r.totalRunTimeSeconds.toFixed(2)}s</td>
+                    <td class="time-badge best-badge">${r.fastestStarSeconds.toFixed(2)}s</td>
+                </tr>
+            `).join('');
+        }
+
+        async function loadSplits() {
+            const cat = document.getElementById('categorySelect').value;
+            const tag = document.getElementById('runnerTag').value;
+            const res = await fetch(`/api/speedrun/splits?runnerTag=${encodeURIComponent(tag)}&category=${encodeURIComponent(cat)}`);
+            const data = await res.json();
+            const tbody = document.getElementById('splitsBody');
+            tbody.innerHTML = data.map(s => `
+                <tr>
+                    <td>C${s.courseNumber}: ${s.levelName}</td>
+                    <td>Star ${s.starNumber}</td>
+                    <td>${s.starName}</td>
+                    <td class="time-badge best-badge">${s.bestTimeSeconds.toFixed(2)}s</td>
+                    <td>${new Date(s.lastUpdated).toLocaleTimeString()}</td>
+                </tr>
+            `).join('');
+        }
+
+        async function handleUpdateTime(e) {
+            e.preventDefault();
+            const payload = {
+                runnerTag: document.getElementById('runnerTag').value,
+                starName: document.getElementById('starSelect').value,
+                category: document.getElementById('categorySelect').value,
+                timeSeconds: parseFloat(document.getElementById('splitSeconds').value)
+            };
+
+            await fetch('/api/speedrun/updatetime', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+
+            document.getElementById('splitSeconds').value = '';
+            loadAllData();
+        }
+
+        function loadAllData() {
+            loadLeaderboard();
+            loadSplits();
+        }
+
+        loadAllData();
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+## Build output & intermediate artifacts
+[Bb]in/
+[Oo]bj/
+out/
+
+## Visual Studio & VS Code files
+.vs/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+
+## Sensitive configuration / local environments
+appsettings.Development.json
+*.local.json
+
+## Archives & binary packages
+*.zip
+*.tar.gz
+*.7z
+*.rar
+
+## OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
