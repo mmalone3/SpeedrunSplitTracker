@@ -186,227 +186,227 @@ END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Boil the Big Bully')
 BEGIN
     DECLARE @LID_28 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Lethal Lava Land');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_28, 30, N'Boil the Big Bully');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_28, 28, N'Boil the Big Bully');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Bully the Bullies')
 BEGIN
     DECLARE @LID_29 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Lethal Lava Land');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_29, 31, N'Bully the Bullies');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_29, 29, N'Bully the Bullies');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'8-Coin Puzzle with 15 Pieces')
 BEGIN
     DECLARE @LID_30 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Lethal Lava Land');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_30, 32, N'8-Coin Puzzle with 15 Pieces');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_30, 30, N'8-Coin Puzzle with 15 Pieces');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Red-Hot Log Rolling')
 BEGIN
     DECLARE @LID_31 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Lethal Lava Land');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_31, 33, N'Red-Hot Log Rolling');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_31, 31, N'Red-Hot Log Rolling');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Hot-Foot-It into the Volcano')
 BEGIN
     DECLARE @LID_32 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Lethal Lava Land');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_32, 34, N'Hot-Foot-It into the Volcano');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_32, 32, N'Hot-Foot-It into the Volcano');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Board Bowser’s Sub (Dire, Dire Docks Star 1)')
 BEGIN
     DECLARE @LID_33 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Bowser in the Fire Sea');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_33, 35, N'Board Bowser’s Sub (Dire, Dire Docks Star 1)');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_33, 33, N'Board Bowser’s Sub (Dire, Dire Docks Star 1)');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Bowser in the Fire Sea (Red Coins)')
 BEGIN
     DECLARE @LID_34 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Bowser in the Fire Sea');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_34, 36, N'Bowser in the Fire Sea (Red Coins)');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_34, 34, N'Bowser in the Fire Sea (Red Coins)');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Into the Igloo')
 BEGIN
     DECLARE @LID_35 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Snowman’s Land');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_35, 37, N'Into the Igloo');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_35, 35, N'Into the Igloo');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Snowman’s Big Head (Cannon)')
 BEGIN
     DECLARE @LID_36 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Snowman’s Land');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_36, 38, N'Snowman’s Big Head (Cannon)');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_36, 36, N'Snowman’s Big Head (Cannon)');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'In the Deep Freeze')
 BEGIN
     DECLARE @LID_37 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Snowman’s Land');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_37, 39, N'In the Deep Freeze');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_37, 37, N'In the Deep Freeze');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Whirl from the Freezing Pond')
 BEGIN
     DECLARE @LID_38 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Snowman’s Land');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_38, 40, N'Whirl from the Freezing Pond');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_38, 38, N'Whirl from the Freezing Pond');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Mysterious Mountainside')
 BEGIN
     DECLARE @LID_39 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Tall Tall Mountain');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_39, 40, N'Mysterious Mountainside');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_39, 39, N'Mysterious Mountainside');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Blast to the Lonely Mushroom')
 BEGIN
     DECLARE @LID_40 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Tall Tall Mountain');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_40, 41, N'Blast to the Lonely Mushroom');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_40, 40, N'Blast to the Lonely Mushroom');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Toad’s Second Star')
 BEGIN
     DECLARE @LID_41 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Tall Tall Mountain');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_41, 42, N'Toad’s Second Star');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_41, 41, N'Toad’s Second Star');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Shocking Arrow Lifts!')
 BEGIN
     DECLARE @LID_42 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Wet-Dry World');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_42, 43, N'Shocking Arrow Lifts!');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_42, 42, N'Shocking Arrow Lifts!');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Top O’ The Town')
 BEGIN
     DECLARE @LID_43 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Wet-Dry World');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_43, 44, N'Top O’ The Town');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_43, 43, N'Top O’ The Town');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Secrets in the Shallows & Sky')
 BEGIN
     DECLARE @LID_44 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Wet-Dry World');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_44, 45, N'Secrets in the Shallows & Sky');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_44, 44, N'Secrets in the Shallows & Sky');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Express Elevators–Hurry Up!')
 BEGIN
     DECLARE @LID_45 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Wet-Dry World');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_45, 47, N'Express Elevators–Hurry Up!');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_45, 45, N'Express Elevators–Hurry Up!');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Quick Race through Downtown')
 BEGIN
     DECLARE @LID_46 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Wet-Dry World');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_46, 48, N'Quick Race through Downtown');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_46, 46, N'Quick Race through Downtown');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Red Coins (Downtown)')
 BEGIN
     DECLARE @LID_47 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Wet-Dry World');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_47, 49, N'Red Coins (Downtown)');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_47, 47, N'Red Coins (Downtown)');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Pluck the Piranha Flower')
 BEGIN
     DECLARE @LID_48 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Tiny-Huge Island');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_48, 50, N'Pluck the Piranha Flower');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_48, 48, N'Pluck the Piranha Flower');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'The Tip Top of the Huge Island')
 BEGIN
     DECLARE @LID_49 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Tiny-Huge Island');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_49, 51, N'The Tip Top of the Huge Island');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_49, 49, N'The Tip Top of the Huge Island');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Rematch with Koopa the Quick')
 BEGIN
     DECLARE @LID_50 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Tiny-Huge Island');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_50, 52, N'Rematch with Koopa the Quick');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_50, 50, N'Rematch with Koopa the Quick');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Five Itty Bitty Secrets')
 BEGIN
     DECLARE @LID_51 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Tiny-Huge Island');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_51, 53, N'Five Itty Bitty Secrets');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_51, 51, N'Five Itty Bitty Secrets');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Make Wiggler Squirm')
 BEGIN
     DECLARE @LID_52 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Tiny-Huge Island');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_52, 54, N'Make Wiggler Squirm');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_52, 52, N'Make Wiggler Squirm');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Slip Slidin’ Away')
 BEGIN
     DECLARE @LID_53 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Cool, Cool Mountain');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_53, 55, N'Slip Slidin’ Away');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_53, 53, N'Slip Slidin’ Away');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Li’l Penguin Lost')
 BEGIN
     DECLARE @LID_54 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Cool, Cool Mountain');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_54, 56, N'Li’l Penguin Lost');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_54, 54, N'Li’l Penguin Lost');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Big Penguin Race')
 BEGIN
     DECLARE @LID_55 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Cool, Cool Mountain');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_55, 57, N'Big Penguin Race');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_55, 55, N'Big Penguin Race');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Snowman’s Lost His Head')
 BEGIN
     DECLARE @LID_56 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Cool, Cool Mountain');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_56, 58, N'Snowman’s Lost His Head');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_56, 56, N'Snowman’s Lost His Head');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Wall Kicks Will Work')
 BEGIN
     DECLARE @LID_57 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Cool, Cool Mountain');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_57, 59, N'Wall Kicks Will Work');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_57, 57, N'Wall Kicks Will Work');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Plunder in the Sunken Ship')
 BEGIN
     DECLARE @LID_58 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Jolly Roger Bay');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_58, 60, N'Plunder in the Sunken Ship');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_58, 58, N'Plunder in the Sunken Ship');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Can the Eel Come out and Play?')
 BEGIN
     DECLARE @LID_59 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Jolly Roger Bay');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_59, 61, N'Can the Eel Come out and Play?');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_59, 59, N'Can the Eel Come out and Play?');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Treasure of the Ocean Cave')
 BEGIN
     DECLARE @LID_60 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Jolly Roger Bay');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_60, 62, N'Treasure of the Ocean Cave');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_60, 60, N'Treasure of the Ocean Cave');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Blast to the Stone Pillar')
 BEGIN
     DECLARE @LID_61 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Jolly Roger Bay');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_61, 63, N'Blast to the Stone Pillar');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_61, 61, N'Blast to the Stone Pillar');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Toad’s Third Star')
 BEGIN
     DECLARE @LID_62 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Jolly Roger Bay');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_62, 64, N'Toad’s Third Star');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_62, 62, N'Toad’s Third Star');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Princess''s Secret Slide / Rainbow Route')
 BEGIN
     DECLARE @LID_63 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Rainbow Ride');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_63, 65, N'Princess''s Secret Slide / Rainbow Route');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_63, 63, N'Princess''s Secret Slide / Rainbow Route');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Tricky Triangles!')
 BEGIN
     DECLARE @LID_64 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Rainbow Ride');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_64, 66, N'Tricky Triangles!');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_64, 64, N'Tricky Triangles!');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Swingin’ in the Breeze')
 BEGIN
     DECLARE @LID_65 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Rainbow Ride');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_65, 67, N'Swingin’ in the Breeze');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_65, 65, N'Swingin’ in the Breeze');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Coins Amassed in a Maze')
 BEGIN
     DECLARE @LID_66 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Rainbow Ride');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_66, 68, N'Coins Amassed in a Maze');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_66, 66, N'Coins Amassed in a Maze');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Roll into the Cage')
 BEGIN
     DECLARE @LID_67 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Tick Tock Clock');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_67, 69, N'Roll into the Cage');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_67, 67, N'Roll into the Cage');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Top of the Pyramid (Shell Ride)')
 BEGIN
     DECLARE @LID_68 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Shifting Sand Land');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_68, 70, N'Top of the Pyramid (Shell Ride)');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_68, 68, N'Top of the Pyramid (Shell Ride)');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Inside the Ancient Pyramid')
 BEGIN
     DECLARE @LID_69 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Shifting Sand Land');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_69, 71, N'Inside the Ancient Pyramid');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_69, 69, N'Inside the Ancient Pyramid');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'In the Talons of the Big Bird')
 BEGIN
     DECLARE @LID_70 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Shifting Sand Land');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_70, 72, N'In the Talons of the Big Bird');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_70, 70, N'In the Talons of the Big Bird');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Through the Jet Stream')
 BEGIN
     DECLARE @LID_71 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Dire, Dire Docks');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_71, 73, N'Through the Jet Stream');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_71, 71, N'Through the Jet Stream');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Pole-Jumping for Red Coins / Caps')
 BEGIN
     DECLARE @LID_72 INT = (SELECT LevelID FROM dbo.Levels WHERE LevelName = N'Dire, Dire Docks');
-    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_72, 74, N'Pole-Jumping for Red Coins / Caps');
+    INSERT INTO dbo.Stars (LevelID, StarNumber, StarName) VALUES (@LID_72, 72, N'Pole-Jumping for Red Coins / Caps');
 END
 IF NOT EXISTS (SELECT 1 FROM dbo.Stars WHERE StarName = N'Beat Bowser in the Sky')
 BEGIN
