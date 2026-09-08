@@ -1,0 +1,27 @@
+RouteOrder,RunnerTag,CourseName,StarNumber,StarName,BestTimeSeconds,GoldSplit,DeltaToGold,CumulativePace,Notes
+1,CosmicMario,Bob-omb Battlefield,1,Behind Chain Chomp's Gate,48.5,45.1,3.4,48.5,Do what you need to (stomp the post).
+2,CosmicMario,Castle Secret Stars & Cap Courses,2,The Princess’s Secret Slide (Under 21s),31.2,30.5,0.7,79.7,"Hold forward, go fast."
+3,CosmicMario,Castle Secret Stars & Cap Courses,3,The Princess’s Secret Slide (Box / Timed),33.4,33.4,0.0,113.1,"Hold forward, go fast."
+4,CosmicMario,Whomp’s Fortress,4,Shoot into the Wild Blue,24.1,22.8,1.3,137.2,Side jump consistently.
+5,CosmicMario,Whomp’s Fortress,5,Chip off Whomp’s Block,28.5,26.9,1.6,165.7,Go around patiently.
+6,CosmicMario,Whomp’s Fortress,6,To the Top of the Fortress,36.9,36.9,0.0,202.6,Go around patiently.
+7,CosmicMario,Whomp’s Fortress,7,Fall onto the Caged Island,29.8,27.3,2.5,232.4,Always aim more to the right.
+8,CosmicMario,Whomp’s Fortress,8,Blast Away the Wall,22.4,22.4,0.0,254.8,Jump from sign. | Alternatively: Patiently walk around.
+11,CosmicMario,Bob-omb Battlefield (Revisit),11,Big Bob-omb on the Summit,49.0,46.3,2.7,303.8,Run straight into the bomb. | Side jumps. | Twice thrown off; once is alright.
+12,CosmicMario,Bob-omb Battlefield (Revisit),12,Footrace with Koopa the Quick,58.2,53.7,4.5,362.0,Rest / pace yourself. | Run tight circles.
+13,CosmicMario,Bob-omb Battlefield (Revisit),13,Shoot to the Island in the Sky,35.1,33.9,1.2,397.1,Use cannon directly to island star.
+23,CosmicMario,Big Boo’s Haunt,23,100 Coins,85.0,82.4,2.6,482.1,"75 coins inside and around courtyard, finish in merry-go-round."
+27,CosmicMario,Big Boo’s Haunt,27,Red Coins,62.1,59.8,2.3,544.2,"Route: Right, left, two upstairs, one in red top, one in right library."
+1,SpeedyYoshi,Bob-omb Battlefield,1,Behind Chain Chomp's Gate,45.1,45.1,0.0,45.1,Do what you need to (stomp the post).
+2,SpeedyYoshi,Castle Secret Stars & Cap Courses,2,The Princess’s Secret Slide (Under 21s),30.5,30.5,0.0,75.6,"Hold forward, go fast."
+3,SpeedyYoshi,Castle Secret Stars & Cap Courses,3,The Princess’s Secret Slide (Box / Timed),34.0,33.4,0.6,109.6,"Hold forward, go fast."
+4,SpeedyYoshi,Whomp’s Fortress,4,Shoot into the Wild Blue,22.8,22.8,0.0,132.4,Side jump consistently.
+5,SpeedyYoshi,Whomp’s Fortress,5,Chip off Whomp’s Block,26.9,26.9,0.0,159.3,Go around patiently.
+6,SpeedyYoshi,Whomp’s Fortress,6,To the Top of the Fortress,38.0,36.9,1.1,197.3,Go around patiently.
+7,SpeedyYoshi,Whomp’s Fortress,7,Fall onto the Caged Island,27.3,27.3,0.0,224.6,Always aim more to the right.
+8,SpeedyYoshi,Whomp’s Fortress,8,Blast Away the Wall,24.1,22.4,1.7,248.7,Jump from sign. | Alternatively: Patiently walk around.
+11,SpeedyYoshi,Bob-omb Battlefield (Revisit),11,Big Bob-omb on the Summit,46.3,46.3,0.0,295.0,Run straight into the bomb. | Side jumps. | Twice thrown off; once is alright.
+12,SpeedyYoshi,Bob-omb Battlefield (Revisit),12,Footrace with Koopa the Quick,53.7,53.7,0.0,348.7,Rest / pace yourself. | Run tight circles.
+13,SpeedyYoshi,Bob-omb Battlefield (Revisit),13,Shoot to the Island in the Sky,33.9,33.9,0.0,382.6,Use cannon directly to island star.
+23,SpeedyYoshi,Big Boo’s Haunt,23,100 Coins,82.4,82.4,0.0,465.0,"75 coins inside and around courtyard, finish in merry-go-round."
+27,SpeedyYoshi,Big Boo’s Haunt,27,Red Coins,59.8,59.8,0.0,524.8,"Route: Right, left, two upstairs, one in red top, one in right library."

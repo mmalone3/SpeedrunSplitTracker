@@ -115,22 +115,41 @@ http://localhost:5000   (or https://localhost:7xxx as displayed in your terminal
 
 ---
 
+## � Python Route Analytics & SQL Telemetry Engine (Option 1 Implementation)
+
+The project includes an external Python telemetry engine that bridges relational database persistence with route strategy graph dictionaries (`sm64_70_star_route` in [pythondictionarySM64.py](pythondictionarySM64.py)):
+
+* **Route Integration Engine ([split_analysis.py](split_analysis.py)):** Ingests database splits, calculates segment ordering, identifies **Community Gold Splits** (fastest theoretical segment across all runners), computes accumulated pace, and highlights top time-save opportunities.
+* **Auto Route Seed Generator ([Database/seed_70star_route.sql](Database/seed_70star_route.sql)):** Generated via [generate_seed_sql.py](generate_seed_sql.py) to automatically populate all courses and star missions from the route dictionary into `dbo.Levels` and `dbo.Stars`.
+* **Telemetry CSV Export:** Automatically outputs [Speedrun_70Star_Analysis_Export.csv](Speedrun_70Star_Analysis_Export.csv) for external visualization and analytics.
+
+### Running the Python Engine
+```powershell
+python split_analysis.py
+```
+
+---
+
 ## 📂 Project Structure
 
 ```text
 SpeedrunSplitTracker/
 ├── Controllers/
-│   └── SpeedrunController.cs     # REST API Controller executing SQL Stored Procedures
+│   └── SpeedrunController.cs          # REST API Controller executing SQL Stored Procedures
 ├── Database/
-│   └── schema.sql                # Full SQL schema, procedures, and seed datasets
+│   ├── schema.sql                     # Full SQL schema, procedures, and core seed datasets
+│   └── seed_70star_route.sql          # Complete 70-star route seed generated from Python
 ├── Models/
-│   └── SpeedrunModels.cs         # Strongly typed C# DTO contracts
+│   └── SpeedrunModels.cs              # Strongly typed C# DTO contracts
+├── pythondictionarySM64.py            # SM64 70-Star speedrun route definition
+├── split_analysis.py                  # Python split analysis, gold splits & pacing engine
+├── generate_seed_sql.py               # Generates SQL seed script from Python dictionary
+├── Speedrun_70Star_Analysis_Export.csv # Generated analytical export dataset
 ├── wwwroot/
-│   └── index.html                # Live interactive dark-mode dashboard
-├── appsettings.json              # Connection strings and environment config
-├── Program.cs                    # Application startup, routing & static file middleware
-├── .gitignore                    # Excludes build outputs (bin/, obj/)
-└── README.md                     # Complete project documentation and guide
+│   └── index.html                     # Live interactive dark-mode dashboard
+├── appsettings.json                   # Connection strings and environment config
+├── Program.cs                         # Application startup, routing & static file middleware
+└── README.md                          # Complete project documentation and guide
 ```
 
 ---
