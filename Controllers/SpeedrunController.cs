@@ -92,4 +92,37 @@ public class SpeedrunController : ControllerBase
 
         return Ok(new { message = "Time updated successfully!" });
     }
+
+    [HttpPost("bulkupdate")]
+    public async Task<IActionResult> BulkUpdateStarTimes([FromBody] IEnumerable<UpdateStarTimeRequest> requests)
+    {
+        using var conn = new SqlConnection(_connectionString);
+        await conn.OpenAsync();
+        using var transaction = conn.BeginTransaction();
+
+        try
+        {
+            foreach (var req in requests)
+            {
+                using var cmd = new SqlCommand("dbo.sp_UpsertStarTime", conn, transaction)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                cmd.Parameters.AddWithValue("@RunnerTag", req.RunnerTag);
+                cmd.Parameters.AddWithValue("@StarName", req.StarName);
+                cmd.Parameters.AddWithValue("@Category", req.Category);
+                cmd.Parameters.AddWithValue("@TimeSeconds", req.TimeSeconds);
+
+                await cmd.ExecuteNonQueryAsync();
+            }
+
+            await transaction.CommitAsync();
+            return Ok(new { message = "All splits updated successfully!" });
+        }
+        catch (Exception ex)
+        {
+            await transaction.RollbackAsync();
+            return StatusCode(500, new { error = ex.Message });
+        }
+    }
 }
