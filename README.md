@@ -13,6 +13,7 @@
 The **Speedrun Split & Telemetry API** is a full-stack backend service and telemetry dashboard designed to record, aggregate, and analyze competitive speedrun splits (such as *Super Mario 64* star courses).
 
 Built to replace flat-file timers with structured relational persistence, the service delegates heavy analytical computations (total accumulated run times, fastest segment identification, and dynamic category leaderboards) directly to **SQL Server Stored Procedures**, exposing clean RESTful endpoints through an **ASP.NET Core** Web API and an integrated interactive web UI.
+<img width="3711" height="1404" alt="screenshot1" src="https://github.com/user-attachments/assets/013226d2-9f0f-411d-b384-56ac02124d17" />
 
 ---
 
