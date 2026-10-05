@@ -5,7 +5,7 @@
 [![.NET Version](https://img.shields.io/badge/.NET-10.0%20%2F%208.0+-512BD4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
 [![SQL Server](https://img.shields.io/badge/SQL%20Server-2022%20%2F%202025-CC292B?logo=microsoftsqlserver&logoColor=white)](https://www.microsoft.com/sql-server)
 [![API Testing](https://img.shields.io/badge/API-Postman%20%26%20OpenAPI-FF6C37?logo=postman&logoColor=white)](https://www.postman.com/)
-<img width="3489" height="546" alt="bottom" src="https://github.com/user-attachments/assets/732f2667-00ec-4a6b-b36f-c812f60a1d1a" />
+
 
 ---
 
@@ -15,6 +15,7 @@ The **Speedrun Split & Telemetry API** is a full-stack backend service and telem
 
 Built to replace flat-file timers with structured relational persistence, the service delegates heavy analytical computations (total accumulated run times, fastest segment identification, and dynamic category leaderboards) directly to **SQL Server Stored Procedures**, exposing clean RESTful endpoints through an **ASP.NET Core** Web API and an integrated interactive web UI.
 <img width="3711" height="1404" alt="screenshot1" src="https://github.com/user-attachments/assets/013226d2-9f0f-411d-b384-56ac02124d17" />
+<img width="3489" height="546" alt="bottom" src="https://github.com/user-attachments/assets/c5cceb56-db20-4358-8c54-4032378feb96" />
 
 ---
 
